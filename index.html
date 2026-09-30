@@ -1,0 +1,3465 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<meta name="description"
+content="Professional AC servicing, repair, installation and maintenance services.">
+
+<title>CoolCare AC Services | AC Repair & Service</title>
+
+<!-- Optional Favicon -->
+<link rel="icon" type="image/png" href="https://i.ibb.co/your-favicon.png">
+
+<!-- Google Font -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+
+<style>
+
+/* =========================================================
+   RESET
+========================================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    background: #f5f9fc;
+    color: #172b3a;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+button {
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================================================
+   COLORS
+========================================================= */
+
+:root {
+    --primary: #0879c9;
+    --primary-dark: #05558e;
+    --secondary: #16a9e0;
+    --accent: #ffb703;
+    --dark: #102a43;
+    --text: #526575;
+    --light: #eef8fd;
+    --white: #ffffff;
+    --border: #dfeaf1;
+    --success: #18a957;
+    --danger: #e63946;
+}
+
+
+/* =========================================================
+   HEADER
+========================================================= */
+
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255,255,255,0.96);
+    backdrop-filter: blur(15px);
+    border-bottom: 1px solid var(--border);
+}
+
+.navbar {
+    max-width: 1200px;
+    height: 72px;
+    margin: auto;
+    padding: 0 18px;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    font-weight: 800;
+    color: var(--primary-dark);
+    font-size: 19px;
+}
+
+.logo-icon {
+    width: 43px;
+    height: 43px;
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--primary),
+        var(--secondary)
+    );
+
+    color: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 23px;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+}
+
+.nav-links a {
+    font-size: 14px;
+    font-weight: 600;
+    color: var(--dark);
+}
+
+.nav-links a:hover {
+    color: var(--primary);
+}
+
+.nav-book {
+    background: var(--primary);
+    color: white !important;
+
+    padding: 10px 17px;
+    border-radius: 8px;
+}
+
+.mobile-menu {
+    display: none;
+
+    border: none;
+    background: none;
+
+    font-size: 25px;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+    background:
+        radial-gradient(
+            circle at 85% 20%,
+            rgba(22,169,224,.25),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #eaf8ff,
+            #ffffff
+        );
+}
+
+.hero-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 75px 20px;
+
+    display: grid;
+    grid-template-columns: 1.1fr .9fr;
+    gap: 45px;
+
+    align-items: center;
+}
+
+.hero-badge {
+    display: inline-block;
+
+    background: #dff3ff;
+    color: var(--primary-dark);
+
+    padding: 8px 15px;
+    border-radius: 30px;
+
+    font-size: 12px;
+    font-weight: 700;
+
+    margin-bottom: 18px;
+}
+
+.hero h1 {
+    color: var(--dark);
+
+    font-size: clamp(
+        40px,
+        6vw,
+        67px
+    );
+
+    line-height: 1.08;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 span {
+    color: var(--primary);
+}
+
+.hero p {
+    color: var(--text);
+
+    max-width: 590px;
+
+    line-height: 1.8;
+
+    margin-bottom: 28px;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+}
+
+.btn {
+    border: none;
+
+    padding: 14px 22px;
+
+    border-radius: 9px;
+
+    font-weight: 700;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    transition: .25s;
+}
+
+.btn-primary {
+    background: var(--primary);
+    color: white;
+}
+
+.btn-primary:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+}
+
+.btn-secondary {
+    background: white;
+    color: var(--primary);
+
+    border: 1px solid var(--border);
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   HERO VISUAL
+========================================================= */
+
+.hero-visual {
+    display: flex;
+    justify-content: center;
+}
+
+.ac-card {
+    width: min(420px, 90%);
+
+    background: white;
+
+    border-radius: 30px;
+
+    padding: 40px;
+
+    box-shadow:
+        0 25px 70px rgba(0,80,130,.14);
+
+    text-align: center;
+
+    position: relative;
+}
+
+.ac-machine {
+    font-size: 125px;
+    margin-bottom: 15px;
+}
+
+.ac-card h2 {
+    color: var(--dark);
+    margin-bottom: 8px;
+}
+
+.ac-card p {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.rating {
+    margin-top: 20px;
+
+    background: #fff7df;
+
+    display: inline-block;
+
+    padding: 8px 15px;
+
+    border-radius: 30px;
+
+    color: #a66c00;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================================================
+   FEATURES
+========================================================= */
+
+.features {
+    max-width: 1150px;
+
+    margin: -35px auto 0;
+
+    padding: 0 20px;
+
+    position: relative;
+    z-index: 5;
+}
+
+.feature-grid {
+    background: white;
+
+    border-radius: 18px;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    box-shadow:
+        0 15px 50px rgba(0,0,0,.08);
+
+    overflow: hidden;
+}
+
+.feature {
+    padding: 25px;
+
+    text-align: center;
+
+    border-right: 1px solid var(--border);
+}
+
+.feature:last-child {
+    border-right: none;
+}
+
+.feature-icon {
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+
+.feature h3 {
+    font-size: 15px;
+}
+
+.feature p {
+    font-size: 12px;
+    color: var(--text);
+    margin-top: 4px;
+}
+
+
+/* =========================================================
+   GENERAL SECTIONS
+========================================================= */
+
+section {
+    padding: 85px 20px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.section-heading small {
+    color: var(--primary);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+
+    font-weight: 800;
+}
+
+.section-heading h2 {
+    color: var(--dark);
+
+    font-size: 36px;
+
+    margin-top: 8px;
+}
+
+.section-heading p {
+    color: var(--text);
+
+    margin-top: 8px;
+}
+
+
+/* =========================================================
+   SERVICE FILTER
+========================================================= */
+
+.service-tools {
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+
+    margin-bottom: 30px;
+}
+
+.search-box {
+    flex: 1;
+
+    min-width: 240px;
+}
+
+.search-box input {
+    width: 100%;
+
+    padding: 14px 17px;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    background: white;
+
+    outline: none;
+}
+
+.search-box input:focus {
+    border-color: var(--primary);
+}
+
+.categories {
+    display: flex;
+
+    flex-wrap: wrap;
+
+    gap: 8px;
+}
+
+.category-btn {
+    border: 1px solid var(--border);
+
+    background: white;
+
+    padding: 10px 16px;
+
+    border-radius: 30px;
+
+    font-size: 12px;
+
+    font-weight: 600;
+}
+
+.category-btn.active,
+.category-btn:hover {
+    background: var(--primary);
+
+    color: white;
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+.services-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+.service-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 17px;
+
+    overflow: hidden;
+
+    transition: .3s;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+
+    box-shadow:
+        0 18px 40px rgba(0,70,120,.10);
+}
+
+.service-image {
+    height: 190px;
+
+    background: var(--light);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: .4s;
+}
+
+.service-card:hover img {
+    transform: scale(1.06);
+}
+
+.service-info {
+    padding: 18px;
+}
+
+.service-category {
+    color: var(--primary);
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    text-transform: uppercase;
+}
+
+.service-info h3 {
+    font-size: 16px;
+
+    margin: 6px 0;
+}
+
+.service-info p {
+    font-size: 12px;
+
+    color: var(--text);
+
+    line-height: 1.6;
+
+    min-height: 39px;
+}
+
+.service-bottom {
+    margin-top: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.service-price {
+    color: var(--primary-dark);
+
+    font-weight: 800;
+
+    font-size: 17px;
+}
+
+.book-btn {
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 9px 13px;
+
+    border-radius: 7px;
+
+    font-size: 11px;
+
+    font-weight: 700;
+}
+
+.book-btn:hover {
+    background: var(--primary-dark);
+}
+
+
+/* =========================================================
+   ABOUT
+========================================================= */
+
+.about {
+    background: #eaf7fd;
+}
+
+.about-grid {
+    display: grid;
+
+    grid-template-columns:
+        1fr 1fr;
+
+    gap: 60px;
+
+    align-items: center;
+}
+
+.about-visual {
+    min-height: 350px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #0879c9,
+            #16a9e0
+        );
+
+    border-radius: 25px;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 30px;
+}
+
+.about-visual .big-icon {
+    font-size: 110px;
+}
+
+.about-content h2 {
+    font-size: 37px;
+
+    color: var(--dark);
+
+    margin: 8px 0 20px;
+}
+
+.about-content p {
+    color: var(--text);
+
+    line-height: 1.8;
+
+    margin-bottom: 18px;
+}
+
+.check-list {
+    list-style: none;
+}
+
+.check-list li {
+    margin: 12px 0;
+
+    font-size: 14px;
+
+    font-weight: 600;
+}
+
+.check-list li::before {
+    content: "✓";
+
+    color: var(--success);
+
+    font-weight: 900;
+
+    margin-right: 10px;
+}
+
+
+/* =========================================================
+   CONTACT
+========================================================= */
+
+.contact-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 20px;
+}
+
+.contact-card {
+    background: white;
+
+    border: 1px solid var(--border);
+
+    border-radius: 17px;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.contact-icon {
+    font-size: 32px;
+
+    margin-bottom: 10px;
+}
+
+.contact-card h3 {
+    margin-bottom: 6px;
+}
+
+.contact-card p {
+    color: var(--text);
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+    background: #092d46;
+
+    color: white;
+
+    padding: 50px 20px 25px;
+}
+
+.footer-grid {
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        2fr 1fr 1fr;
+
+    gap: 40px;
+}
+
+footer h3 {
+    margin-bottom: 14px;
+}
+
+footer p,
+footer li {
+    color: #b8cbd7;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+}
+
+footer ul {
+    list-style: none;
+}
+
+footer li {
+    margin: 6px 0;
+}
+
+.copyright {
+    max-width: 1200px;
+
+    margin: 35px auto 0;
+
+    padding-top: 20px;
+
+    border-top: 1px solid rgba(255,255,255,.1);
+
+    text-align: center;
+
+    color: #8da7b6;
+
+    font-size: 11px;
+}
+
+
+/* =========================================================
+   BOOKING PANEL
+========================================================= */
+
+.overlay {
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(0,0,0,.45);
+
+    z-index: 2000;
+
+    display: none;
+}
+
+.overlay.active {
+    display: block;
+}
+
+.booking-panel {
+    position: fixed;
+
+    right: 0;
+    top: 0;
+
+    width: min(500px, 100%);
+
+    height: 100vh;
+
+    background: white;
+
+    z-index: 2100;
+
+    transform: translateX(100%);
+
+    transition: .3s;
+
+    display: flex;
+
+    flex-direction: column;
+}
+
+.booking-panel.active {
+    transform: translateX(0);
+}
+
+.booking-header {
+    padding: 20px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    border-bottom: 1px solid var(--border);
+}
+
+.booking-header small {
+    color: var(--text);
+}
+
+.close-booking {
+    border: none;
+
+    background: #eef3f6;
+
+    width: 36px;
+    height: 36px;
+
+    border-radius: 50%;
+}
+
+.booking-body {
+    flex: 1;
+
+    overflow-y: auto;
+
+    padding: 20px;
+}
+
+
+/* =========================================================
+   SELECTED SERVICES
+========================================================= */
+
+.selected-service {
+    background: #f4f9fc;
+
+    border: 1px solid var(--border);
+
+    border-radius: 10px;
+
+    padding: 13px;
+
+    margin-bottom: 10px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 10px;
+}
+
+.selected-service h4 {
+    font-size: 13px;
+}
+
+.selected-service p {
+    font-size: 11px;
+
+    color: var(--text);
+
+    margin-top: 3px;
+}
+
+.quantity {
+    display: flex;
+
+    align-items: center;
+
+    gap: 7px;
+
+    margin-top: 7px;
+}
+
+.quantity button {
+    width: 25px;
+    height: 25px;
+
+    border: none;
+
+    border-radius: 5px;
+
+    background: #dcecf5;
+}
+
+.remove-service {
+    background: none;
+
+    border: none;
+
+    color: var(--danger);
+
+    font-size: 11px;
+
+    margin-top: 6px;
+}
+
+
+/* =========================================================
+   BOOKING FORM
+========================================================= */
+
+.booking-form {
+    margin-top: 25px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+
+    font-size: 12px;
+
+    font-weight: 700;
+
+    margin-bottom: 6px;
+}
+
+.form-group input,
+.form-group textarea,
+.form-group select {
+    width: 100%;
+
+    border: 1px solid var(--border);
+
+    border-radius: 8px;
+
+    padding: 12px;
+
+    outline: none;
+
+    background: white;
+
+    font-size: 13px;
+}
+
+.form-group input:focus,
+.form-group textarea:focus,
+.form-group select:focus {
+    border-color: var(--primary);
+}
+
+.form-group textarea {
+    resize: vertical;
+
+    min-height: 85px;
+}
+
+
+/* =========================================================
+   TIME SLOTS
+========================================================= */
+
+.slot-grid {
+    display: grid;
+
+    grid-template-columns:
+        repeat(2, 1fr);
+
+    gap: 8px;
+}
+
+.slot-option {
+    position: relative;
+}
+
+.slot-option input {
+    position: absolute;
+
+    opacity: 0;
+}
+
+.slot-option label {
+    display: block;
+
+    border: 1px solid var(--border);
+
+    padding: 11px 7px;
+
+    border-radius: 8px;
+
+    text-align: center;
+
+    cursor: pointer;
+
+    font-size: 11px;
+
+    background: white;
+}
+
+.slot-option input:checked + label {
+    background: var(--primary);
+
+    color: white;
+
+    border-color: var(--primary);
+}
+
+
+/* =========================================================
+   BOOKING SUMMARY
+========================================================= */
+
+.booking-total {
+    background: #eef8fd;
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-weight: 800;
+}
+
+.submit-booking {
+    width: 100%;
+
+    border: none;
+
+    background: var(--primary);
+
+    color: white;
+
+    padding: 15px;
+
+    border-radius: 9px;
+
+    font-weight: 800;
+
+    font-size: 14px;
+}
+
+.submit-booking:hover {
+    background: var(--primary-dark);
+}
+
+.submit-booking:disabled {
+    opacity: .6;
+
+    cursor: not-allowed;
+}
+
+
+/* =========================================================
+   SUCCESS
+========================================================= */
+
+.success-message {
+    display: none;
+
+    text-align: center;
+
+    padding: 35px 15px;
+}
+
+.success-icon {
+    width: 70px;
+    height: 70px;
+
+    margin: 0 auto 15px;
+
+    border-radius: 50%;
+
+    background: #e5f9ed;
+
+    color: var(--success);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 35px;
+}
+
+.success-message h2 {
+    color: var(--dark);
+
+    margin-bottom: 10px;
+}
+
+.success-message p {
+    color: var(--text);
+
+    font-size: 13px;
+
+    line-height: 1.7;
+
+    margin-bottom: 20px;
+}
+
+.whatsapp-success {
+    display: inline-block;
+
+    background: #25D366;
+
+    color: white;
+
+    padding: 12px 18px;
+
+    border-radius: 8px;
+
+    font-weight: 700;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   FLOATING WHATSAPP
+========================================================= */
+
+.whatsapp-float {
+    position: fixed;
+
+    right: 18px;
+
+    bottom: 18px;
+
+    z-index: 1500;
+
+    width: 57px;
+    height: 57px;
+
+    border-radius: 50%;
+
+    background: #25D366;
+
+    color: white;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    font-size: 27px;
+
+    box-shadow:
+        0 10px 30px rgba(37,211,102,.35);
+
+    transition: .25s;
+}
+
+.whatsapp-float:hover {
+    transform: scale(1.08);
+}
+
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width: 950px) {
+
+    .services-grid {
+        grid-template-columns:
+            repeat(3, 1fr);
+    }
+
+    .hero-container {
+        grid-template-columns: 1fr;
+
+        text-align: center;
+    }
+
+    .hero p {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .hero-buttons {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        order: -1;
+    }
+
+    .feature-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .feature:nth-child(2) {
+        border-right: none;
+    }
+
+    .feature:nth-child(3),
+    .feature:nth-child(4) {
+        border-top: 1px solid var(--border);
+    }
+
+    .about-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+@media(max-width: 700px) {
+
+    .nav-links {
+        display: none;
+
+        position: absolute;
+
+        top: 72px;
+        left: 0;
+        right: 0;
+
+        background: white;
+
+        flex-direction: column;
+
+        padding: 25px;
+
+        box-shadow:
+            0 10px 25px rgba(0,0,0,.08);
+    }
+
+    .nav-links.show {
+        display: flex;
+    }
+
+    .mobile-menu {
+        display: block;
+    }
+
+    .nav-book {
+        display: none;
+    }
+
+    .services-grid {
+        grid-template-columns:
+            repeat(2, 1fr);
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .footer-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .hero {
+        min-height: auto;
+    }
+
+}
+
+
+@media(max-width: 470px) {
+
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .feature {
+        border-right: none !important;
+
+        border-bottom: 1px solid var(--border);
+    }
+
+    .feature:last-child {
+        border-bottom: none;
+    }
+
+    .hero h1 {
+        font-size: 42px;
+    }
+
+    .logo {
+        font-size: 15px;
+    }
+
+    .logo-icon {
+        width: 38px;
+        height: 38px;
+    }
+
+}
+
+</style>
+</head>
+
+
+<body>
+
+
+<!-- =========================================================
+     HEADER
+========================================================= -->
+
+<header>
+
+<nav class="navbar">
+
+    <a href="#home" class="logo">
+
+        <span class="logo-icon">❄</span>
+
+        <span>COOLCARE AC SERVICES</span>
+
+    </a>
+
+
+    <ul class="nav-links" id="navLinks">
+
+        <li>
+            <a href="#home">Home</a>
+        </li>
+
+        <li>
+            <a href="#services">Services</a>
+        </li>
+
+        <li>
+            <a href="#about">About</a>
+        </li>
+
+        <li>
+            <a href="#contact">Contact</a>
+        </li>
+
+        <li>
+            <a href="#services" class="nav-book">
+                Book Service
+            </a>
+        </li>
+
+    </ul>
+
+
+    <button
+        class="mobile-menu"
+        onclick="toggleMenu()"
+    >
+        ☰
+    </button>
+
+</nav>
+
+</header>
+
+
+<!-- =========================================================
+     HERO
+========================================================= -->
+
+<section class="hero" id="home">
+
+<div class="hero-container">
+
+
+    <div>
+
+        <span class="hero-badge">
+            ❄ PROFESSIONAL AC SERVICE & REPAIR
+        </span>
+
+
+        <h1>
+
+            Stay Cool.
+            <span>Stay Comfortable.</span>
+
+        </h1>
+
+
+        <p>
+
+            Fast, reliable and affordable AC servicing,
+            repair, installation and maintenance for homes
+            and businesses.
+
+        </p>
+
+
+        <div class="hero-buttons">
+
+            <a
+                href="#services"
+                class="btn btn-primary"
+            >
+                Book AC Service →
+            </a>
+
+
+            <a
+                href="https://wa.me/8109988684"
+                target="_blank"
+                class="btn btn-secondary"
+            >
+                💬 WhatsApp Us
+            </a>
+
+        </div>
+
+    </div>
+
+
+    <div class="hero-visual">
+
+        <div class="ac-card">
+
+            <div class="ac-machine">
+                ❄️
+            </div>
+
+            <h2>
+                Expert AC Care
+            </h2>
+
+            <p>
+                Service • Repair • Installation • Maintenance
+            </p>
+
+            <div class="rating">
+                ⭐ Trusted Local Service
+            </div>
+
+        </div>
+
+    </div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FEATURES
+========================================================= -->
+
+<div class="features">
+
+<div class="feature-grid">
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🛠️
+        </div>
+
+        <h3>
+            Expert Technicians
+        </h3>
+
+        <p>
+            Skilled AC professionals
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            ⚡
+        </div>
+
+        <h3>
+            Quick Service
+        </h3>
+
+        <p>
+            Convenient service slots
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            💰
+        </div>
+
+        <h3>
+            Transparent Pricing
+        </h3>
+
+        <p>
+            No unnecessary charges
+        </p>
+
+    </div>
+
+
+    <div class="feature">
+
+        <div class="feature-icon">
+            🤝
+        </div>
+
+        <h3>
+            Local Support
+        </h3>
+
+        <p>
+            Customer-first service
+        </p>
+
+    </div>
+
+</div>
+
+</div>
+
+
+<!-- =========================================================
+     SERVICES
+========================================================= -->
+
+<section id="services">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+    <small>
+        Our Services
+    </small>
+
+    <h2>
+        AC Services For Every Need
+    </h2>
+
+    <p>
+        Select a service and book your preferred time slot.
+    </p>
+
+</div>
+
+
+<div class="service-tools">
+
+
+    <div class="search-box">
+
+        <input
+            type="text"
+            id="searchInput"
+            placeholder="🔍 Search AC service..."
+            oninput="filterServices()"
+        >
+
+    </div>
+
+
+    <div class="categories">
+
+        <button
+            class="category-btn active"
+            onclick="setCategory('All', this)"
+        >
+            All
+        </button>
+
+
+        <button
+            class="category-btn"
+            onclick="setCategory('AC Service', this)"
+        >
+            AC Service
+        </button>
+
+
+        <button
+            class="category-btn"
+            onclick="setCategory('Repair', this)"
+        >
+            Repair
+        </button>
+
+
+        <button
+            class="category-btn"
+            onclick="setCategory('Installation', this)"
+        >
+            Installation
+        </button>
+
+
+        <button
+            class="category-btn"
+            onclick="setCategory('Maintenance', this)"
+        >
+            Maintenance
+        </button>
+
+    </div>
+
+</div>
+
+
+<div
+    class="services-grid"
+    id="serviceGrid"
+></div>
+
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     ABOUT
+========================================================= -->
+
+<section class="about" id="about">
+
+<div class="container">
+
+<div class="about-grid">
+
+
+    <div class="about-visual">
+
+        <div>
+
+            <div class="big-icon">
+                🧑‍🔧
+            </div>
+
+            <h2>
+                Your Comfort Is Our Priority
+            </h2>
+
+            <p>
+                Professional AC care at your doorstep.
+            </p>
+
+        </div>
+
+    </div>
+
+
+    <div class="about-content">
+
+        <small
+            style="
+            color:var(--primary);
+            font-weight:800;
+            "
+        >
+            ABOUT US
+        </small>
+
+
+        <h2>
+            Reliable AC Service At Your Doorstep
+        </h2>
+
+
+        <p>
+
+            CoolCare AC Services provides reliable AC
+            servicing, repair, installation and maintenance
+            for homes, offices and local businesses.
+
+        </p>
+
+
+        <ul class="check-list">
+
+            <li>
+                AC servicing and cleaning
+            </li>
+
+            <li>
+                Cooling problem diagnosis
+            </li>
+
+            <li>
+                AC installation and uninstallation
+            </li>
+
+            <li>
+                Gas checking and maintenance
+            </li>
+
+            <li>
+                Home and commercial AC support
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     CONTACT
+========================================================= -->
+
+<section id="contact">
+
+<div class="container">
+
+
+<div class="section-heading">
+
+    <small>
+        Contact Us
+    </small>
+
+    <h2>
+        Need AC Help?
+    </h2>
+
+    <p>
+        Contact us or book a convenient service slot.
+    </p>
+
+</div>
+
+
+<div class="contact-grid">
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            📱
+        </div>
+
+        <h3>
+            Call / WhatsApp
+        </h3>
+
+        <p>
+            +91 8109988684
+        </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            📍
+        </div>
+
+        <h3>
+            Service Area
+        </h3>
+
+        <p>
+            Chhindwara, Madhya Pradesh
+        </p>
+
+    </div>
+
+
+    <div class="contact-card">
+
+        <div class="contact-icon">
+            ✉️
+        </div>
+
+        <h3>
+            Email
+        </h3>
+
+        <p>
+            coolcare@example.com
+        </p>
+
+    </div>
+
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- =========================================================
+     FOOTER
+========================================================= -->
+
+<footer>
+
+<div class="footer-grid">
+
+
+    <div>
+
+        <h3>
+            COOLCARE AC SERVICES
+        </h3>
+
+        <p>
+
+            Professional AC servicing, repair,
+            installation and maintenance at your doorstep.
+
+        </p>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Quick Links
+        </h3>
+
+        <ul>
+
+            <li>
+                <a href="#home">
+                    Home
+                </a>
+            </li>
+
+            <li>
+                <a href="#services">
+                    Services
+                </a>
+            </li>
+
+            <li>
+                <a href="#about">
+                    About
+                </a>
+            </li>
+
+            <li>
+                <a href="#contact">
+                    Contact
+                </a>
+            </li>
+
+        </ul>
+
+    </div>
+
+
+    <div>
+
+        <h3>
+            Services
+        </h3>
+
+        <ul>
+
+            <li>
+                AC Cleaning
+            </li>
+
+            <li>
+                AC Repair
+            </li>
+
+            <li>
+                AC Installation
+            </li>
+
+            <li>
+                AC Maintenance
+            </li>
+
+        </ul>
+
+    </div>
+
+
+</div>
+
+
+<div class="copyright">
+
+    © 2026 CoolCare AC Services.
+    All Rights Reserved.
+
+</div>
+
+</footer>
+
+
+<!-- =========================================================
+     WHATSAPP FLOATING BUTTON
+========================================================= -->
+
+<a
+    href="https://wa.me/919876543210"
+    target="_blank"
+    class="whatsapp-float"
+    aria-label="Chat on WhatsApp"
+>
+    💬
+</a>
+
+
+<!-- =========================================================
+     BOOKING OVERLAY
+========================================================= -->
+
+<div
+    class="overlay"
+    id="overlay"
+    onclick="closeBooking()"
+></div>
+
+
+<!-- =========================================================
+     BOOKING PANEL
+========================================================= -->
+
+<div
+    class="booking-panel"
+    id="bookingPanel"
+>
+
+
+<div class="booking-header">
+
+    <div>
+
+        <h3>
+            Book AC Service
+        </h3>
+
+        <small>
+            Select service and preferred slot
+        </small>
+
+    </div>
+
+
+    <button
+        class="close-booking"
+        onclick="closeBooking()"
+    >
+        ✕
+    </button>
+
+</div>
+
+
+<div class="booking-body">
+
+
+<!-- SUCCESS MESSAGE -->
+
+<div
+    class="success-message"
+    id="successMessage"
+>
+
+    <div class="success-icon">
+        ✓
+    </div>
+
+
+    <h2>
+        Booking Submitted!
+    </h2>
+
+
+    <p>
+
+        Your service request has been submitted successfully.
+
+        CoolCare AC Services will contact you on WhatsApp
+        to confirm the service and time slot.
+
+    </p>
+
+
+    <a
+        href="https://wa.me/8109988684"
+        target="_blank"
+        class="whatsapp-success"
+    >
+        💬 Chat on WhatsApp
+    </a>
+
+</div>
+
+
+<!-- BOOKING CONTENT -->
+
+<div id="bookingContent">
+
+
+    <div id="selectedServices">
+
+        <!-- Selected services appear here -->
+
+    </div>
+
+
+    <!-- =====================================================
+         FORMSPREE FORM
+    ====================================================== -->
+
+    <form
+        id="bookingForm"
+        class="booking-form"
+
+        action="https://formspree.io/f/meaonvde"
+
+        method="POST"
+    >
+
+
+        <!-- Formspree email subject -->
+
+        <input
+            type="hidden"
+            name="_subject"
+            value="New AC Service Booking"
+        >
+
+
+        <!-- Hidden complete booking summary -->
+
+        <input
+            type="hidden"
+            name="booking_summary"
+            id="bookingSummary"
+        >
+
+
+        <div class="form-group">
+
+            <label>
+                Customer Name *
+            </label>
+
+            <input
+                type="text"
+                name="customer_name"
+                id="customerName"
+                placeholder="Enter your name"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Phone Number *
+            </label>
+
+            <input
+                type="tel"
+                name="phone"
+                id="customerPhone"
+                placeholder="Enter mobile number"
+                pattern="[0-9]{10}"
+                maxlength="10"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Service Address *
+            </label>
+
+            <textarea
+                name="address"
+                id="customerAddress"
+                placeholder="Enter complete service address"
+                required
+            ></textarea>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Preferred Service Date *
+            </label>
+
+            <input
+                type="date"
+                name="service_date"
+                id="serviceDate"
+                required
+            >
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Select Time Slot *
+            </label>
+
+
+            <div class="slot-grid">
+
+
+                <div class="slot-option">
+
+                    <input
+                        type="radio"
+                        name="time_slot"
+                        id="slot1"
+                        value="9:00 AM - 11:00 AM"
+                        required
+                    >
+
+                    <label for="slot1">
+                        9:00 AM - 11:00 AM
+                    </label>
+
+                </div>
+
+
+                <div class="slot-option">
+
+                    <input
+                        type="radio"
+                        name="time_slot"
+                        id="slot2"
+                        value="11:00 AM - 1:00 PM"
+                    >
+
+                    <label for="slot2">
+                        11:00 AM - 1:00 PM
+                    </label>
+
+                </div>
+
+
+                <div class="slot-option">
+
+                    <input
+                        type="radio"
+                        name="time_slot"
+                        id="slot3"
+                        value="2:00 PM - 4:00 PM"
+                    >
+
+                    <label for="slot3">
+                        2:00 PM - 4:00 PM
+                    </label>
+
+                </div>
+
+
+                <div class="slot-option">
+
+                    <input
+                        type="radio"
+                        name="time_slot"
+                        id="slot4"
+                        value="4:00 PM - 6:00 PM"
+                    >
+
+                    <label for="slot4">
+                        4:00 PM - 6:00 PM
+                    </label>
+
+                </div>
+
+
+                <div class="slot-option">
+
+                    <input
+                        type="radio"
+                        name="time_slot"
+                        id="slot5"
+                        value="6:00 PM - 8:00 PM"
+                    >
+
+                    <label for="slot5">
+                        6:00 PM - 8:00 PM
+                    </label>
+
+                </div>
+
+
+            </div>
+
+        </div>
+
+
+        <div class="form-group">
+
+            <label>
+                Special Instructions
+            </label>
+
+            <textarea
+                name="instructions"
+                id="instructions"
+                placeholder="Example: AC is making unusual noise..."
+            ></textarea>
+
+        </div>
+
+
+        <div class="booking-total">
+
+            <span>
+                Estimated Service Total
+            </span>
+
+            <span>
+                ₹<span id="bookingTotal">
+                    0
+                </span>
+            </span>
+
+        </div>
+
+
+        <button
+            type="submit"
+            class="submit-booking"
+            id="submitButton"
+        >
+            📅 Confirm Service Booking
+        </button>
+
+
+    </form>
+
+</div>
+
+
+</div>
+
+</div>
+
+
+<script>
+
+/* =========================================================
+   BUSINESS SETTINGS
+========================================================= */
+
+
+/*
+    CHANGE THESE DETAILS
+    BEFORE GIVING WEBSITE TO CUSTOMER.
+*/
+
+const BUSINESS_NAME =
+    "CoolCare AC Services";
+
+
+const WHATSAPP_NUMBER =
+    "8109988684";
+
+
+/*
+    IMPORTANT:
+
+    Replace:
+
+    YOUR_FORM_ID
+
+    with the Form ID generated by Formspree.
+
+    Example:
+
+    https://formspree.io/f/xabcdefg
+
+*/
+
+
+/* =========================================================
+   SERVICES
+========================================================= */
+
+const services = [
+
+    {
+        id: 1,
+
+        name: "AC General Service",
+
+        category: "AC Service",
+
+        price: 499,
+
+        image:
+        "https://images.unsplash.com/photo-1631545806609-9e4c2f7d9d65?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Complete AC cleaning and basic performance check."
+    },
+
+
+    {
+        id: 2,
+
+        name: "Deep AC Cleaning",
+
+        category: "AC Service",
+
+        price: 799,
+
+        image:
+        "https://images.unsplash.com/photo-1581092160607-ee22621dd758?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Deep cleaning for better cooling and air quality."
+    },
+
+
+    {
+        id: 3,
+
+        name: "AC Repair",
+
+        category: "Repair",
+
+        price: 299,
+
+        image:
+        "https://images.unsplash.com/photo-1621905252507-b35492cc74b4?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Diagnosis and repair of common AC problems."
+    },
+
+
+    {
+        id: 4,
+
+        name: "AC Not Cooling",
+
+        category: "Repair",
+
+        price: 399,
+
+        image:
+        "https://images.unsplash.com/photo-1631545806609-9e4c2f7d9d65?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Inspection for low cooling and performance issues."
+    },
+
+
+    {
+        id: 5,
+
+        name: "AC Installation",
+
+        category: "Installation",
+
+        price: 1499,
+
+        image:
+        "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Professional split AC installation service."
+    },
+
+
+    {
+        id: 6,
+
+        name: "AC Uninstallation",
+
+        category: "Installation",
+
+        price: 899,
+
+        image:
+        "https://images.unsplash.com/photo-1621905251918-48416bd8575a?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Safe AC removal and uninstallation."
+    },
+
+
+    {
+        id: 7,
+
+        name: "AC Gas Check",
+
+        category: "Maintenance",
+
+        price: 299,
+
+        image:
+        "https://images.unsplash.com/photo-1504328345606-18bbc8c9d7d1?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Gas pressure inspection and cooling diagnosis."
+    },
+
+
+    {
+        id: 8,
+
+        name: "Annual AC Maintenance",
+
+        category: "Maintenance",
+
+        price: 999,
+
+        image:
+        "https://images.unsplash.com/photo-1581092160562-40aa08e78837?auto=format&fit=crop&w=700&q=80",
+
+        description:
+        "Regular maintenance package for better performance."
+    }
+
+];
+
+
+/* =========================================================
+   BOOKING CART
+========================================================= */
+
+let selectedServices =
+    JSON.parse(
+        localStorage.getItem(
+            "acSelectedServices"
+        )
+    ) || [];
+
+
+let currentCategory = "All";
+
+
+/* =========================================================
+   DISPLAY SERVICES
+========================================================= */
+
+function displayServices(list) {
+
+    const grid =
+        document.getElementById(
+            "serviceGrid"
+        );
+
+
+    if (list.length === 0) {
+
+        grid.innerHTML = `
+
+            <div
+                style="
+                grid-column:1/-1;
+                text-align:center;
+                padding:50px;
+                "
+            >
+
+                <h3>
+                    No service found
+                </h3>
+
+                <p
+                    style="
+                    color:#777;
+                    margin-top:8px;
+                    "
+                >
+                    Try another search.
+                </p>
+
+            </div>
+
+        `;
+
+        return;
+    }
+
+
+    grid.innerHTML =
+        list.map(service => `
+
+            <div class="service-card">
+
+
+                <div class="service-image">
+
+                    <img
+
+                        src="${service.image}"
+
+                        alt="${service.name}"
+
+                        loading="lazy"
+
+                    >
+
+                </div>
+
+
+                <div class="service-info">
+
+
+                    <span class="service-category">
+
+                        ${service.category}
+
+                    </span>
+
+
+                    <h3>
+
+                        ${service.name}
+
+                    </h3>
+
+
+                    <p>
+
+                        ${service.description}
+
+                    </p>
+
+
+                    <div class="service-bottom">
+
+
+                        <span class="service-price">
+
+                            ₹${service.price}
+
+                        </span>
+
+
+                        <button
+
+                            class="book-btn"
+
+                            onclick="
+                            addService(${service.id})
+                            "
+
+                        >
+
+                            Book Service
+
+                        </button>
+
+
+                    </div>
+
+
+                </div>
+
+            </div>
+
+        `).join("");
+
+}
+
+
+/* =========================================================
+   FILTER
+========================================================= */
+
+function setCategory(
+    category,
+    button
+) {
+
+    currentCategory =
+        category;
+
+
+    document
+        .querySelectorAll(
+            ".category-btn"
+        )
+        .forEach(btn => {
+
+            btn.classList.remove(
+                "active"
+            );
+
+        });
+
+
+    button.classList.add(
+        "active"
+    );
+
+
+    filterServices();
+
+}
+
+
+function filterServices() {
+
+    const search =
+        document
+        .getElementById(
+            "searchInput"
+        )
+        .value
+        .toLowerCase();
+
+
+    const filtered =
+        services.filter(service => {
+
+
+            const categoryMatch =
+
+                currentCategory === "All" ||
+
+                service.category ===
+                currentCategory;
+
+
+            const searchMatch =
+
+                service.name
+                .toLowerCase()
+                .includes(search);
+
+
+            return (
+                categoryMatch &&
+                searchMatch
+            );
+
+        });
+
+
+    displayServices(
+        filtered
+    );
+
+}
+
+
+/* =========================================================
+   ADD SERVICE
+========================================================= */
+
+function addService(id) {
+
+    const service =
+        services.find(
+            item => item.id === id
+        );
+
+
+    const existing =
+        selectedServices.find(
+            item => item.id === id
+        );
+
+
+    if (existing) {
+
+        existing.quantity++;
+
+    } else {
+
+        selectedServices.push({
+
+            ...service,
+
+            quantity: 1
+
+        });
+
+    }
+
+
+    saveBooking();
+
+
+    updateBooking();
+
+
+    openBooking();
+
+}
+
+
+/* =========================================================
+   REMOVE SERVICE
+========================================================= */
+
+function removeService(id) {
+
+    selectedServices =
+        selectedServices.filter(
+            item => item.id !== id
+        );
+
+
+    saveBooking();
+
+    updateBooking();
+
+}
+
+
+/* =========================================================
+   CHANGE QUANTITY
+========================================================= */
+
+function changeQuantity(
+    id,
+    change
+) {
+
+    const item =
+        selectedServices.find(
+            service => service.id === id
+        );
+
+
+    if (!item) return;
+
+
+    item.quantity += change;
+
+
+    if (item.quantity <= 0) {
+
+        removeService(id);
+
+        return;
+
+    }
+
+
+    saveBooking();
+
+    updateBooking();
+
+}
+
+
+/* =========================================================
+   LOCAL STORAGE
+========================================================= */
+
+function saveBooking() {
+
+    localStorage.setItem(
+
+        "acSelectedServices",
+
+        JSON.stringify(
+            selectedServices
+        )
+
+    );
+
+}
+
+
+/* =========================================================
+   UPDATE BOOKING PANEL
+========================================================= */
+
+function updateBooking() {
+
+    const container =
+        document.getElementById(
+            "selectedServices"
+        );
+
+
+    let total = 0;
+
+
+    if (
+        selectedServices.length === 0
+    ) {
+
+        container.innerHTML = `
+
+            <div
+                style="
+                text-align:center;
+                padding:25px;
+                background:#f5f9fc;
+                border-radius:10px;
+                "
+            >
+
+                <div style="font-size:35px;">
+                    🛠️
+                </div>
+
+                <h3>
+                    No service selected
+                </h3>
+
+                <p
+                    style="
+                    color:#777;
+                    font-size:12px;
+                    margin-top:5px;
+                    "
+                >
+                    Select a service to continue.
+                </p>
+
+            </div>
+
+        `;
+
+    } else {
+
+
+        container.innerHTML =
+
+            selectedServices.map(
+                item => {
+
+                    const subtotal =
+                        item.price *
+                        item.quantity;
+
+
+                    total += subtotal;
+
+
+                    return `
+
+                        <div
+                            class="selected-service"
+                        >
+
+                            <div>
+
+                                <h4>
+                                    ${item.name}
+                                </h4>
+
+                                <p>
+                                    ₹${item.price}
+                                    per service
+                                </p>
+
+
+                                <div
+                                    class="quantity"
+                                >
+
+                                    <button
+                                        onclick="
+                                        changeQuantity(
+                                            ${item.id},
+                                            -1
+                                        )
+                                        "
+                                    >
+                                        −
+                                    </button>
+
+
+                                    <strong>
+                                        ${item.quantity}
+                                    </strong>
+
+
+                                    <button
+                                        onclick="
+                                        changeQuantity(
+                                            ${item.id},
+                                            1
+                                        )
+                                        "
+                                    >
+                                        +
+                                    </button>
+
+
+                                    <button
+                                        class="remove-service"
+                                        onclick="
+                                        removeService(
+                                            ${item.id}
+                                        )
+                                        "
+                                    >
+                                        Remove
+                                    </button>
+
+                                </div>
+
+                            </div>
+
+
+                            <strong>
+
+                                ₹${subtotal}
+
+                            </strong>
+
+                        </div>
+
+                    `;
+
+                }
+            ).join("");
+
+    }
+
+
+    document.getElementById(
+        "bookingTotal"
+    ).textContent =
+        total;
+
+
+    /*
+        Disable booking button
+        when no service is selected.
+    */
+
+    const submitButton =
+        document.getElementById(
+            "submitButton"
+        );
+
+
+    if (
+        selectedServices.length === 0
+    ) {
+
+        submitButton.disabled = true;
+
+    } else {
+
+        submitButton.disabled = false;
+
+    }
+
+}
+
+
+/* =========================================================
+   OPEN BOOKING
+========================================================= */
+
+function openBooking() {
+
+    document
+        .getElementById(
+            "bookingPanel"
+        )
+        .classList.add(
+            "active"
+        );
+
+
+    document
+        .getElementById(
+            "overlay"
+        )
+        .classList.add(
+            "active"
+        );
+
+}
+
+
+/* =========================================================
+   CLOSE BOOKING
+========================================================= */
+
+function closeBooking() {
+
+    document
+        .getElementById(
+            "bookingPanel"
+        )
+        .classList.remove(
+            "active"
+        );
+
+
+    document
+        .getElementById(
+            "overlay"
+        )
+        .classList.remove(
+            "active"
+        );
+
+}
+
+
+/* =========================================================
+   MOBILE MENU
+========================================================= */
+
+function toggleMenu() {
+
+    document
+        .getElementById(
+            "navLinks"
+        )
+        .classList.toggle(
+            "show"
+        );
+
+}
+
+
+/* =========================================================
+   DATE MINIMUM
+========================================================= */
+
+const today =
+    new Date()
+    .toISOString()
+    .split("T")[0];
+
+
+document
+    .getElementById(
+        "serviceDate"
+    )
+    .min = today;
+
+
+/* =========================================================
+   FORMSPREE SUBMISSION
+========================================================= */
+
+const bookingForm =
+    document.getElementById(
+        "bookingForm"
+    );
+
+
+bookingForm.addEventListener(
+    "submit",
+    async function(event) {
+
+        event.preventDefault();
+
+
+        if (
+            selectedServices.length === 0
+        ) {
+
+            alert(
+                "Please select at least one service."
+            );
+
+            return;
+
+        }
+
+
+        /*
+            Collect customer details.
+        */
+
+        const name =
+            document
+            .getElementById(
+                "customerName"
+            )
+            .value;
+
+
+        const phone =
+            document
+            .getElementById(
+                "customerPhone"
+            )
+            .value;
+
+
+        const address =
+            document
+            .getElementById(
+                "customerAddress"
+            )
+            .value;
+
+
+        const date =
+            document
+            .getElementById(
+                "serviceDate"
+            )
+            .value;
+
+
+        const timeSlot =
+            document
+            .querySelector(
+                'input[name="time_slot"]:checked'
+            );
+
+
+        const instructions =
+            document
+            .getElementById(
+                "instructions"
+            )
+            .value;
+
+
+        if (!timeSlot) {
+
+            alert(
+                "Please select a time slot."
+            );
+
+            return;
+
+        }
+
+
+        /*
+            Build complete readable
+            booking summary.
+        */
+
+        let summary =
+
+            `NEW AC SERVICE BOOKING\n\n`;
+
+
+        summary +=
+
+            `BUSINESS:\n` +
+            `${BUSINESS_NAME}\n\n`;
+
+
+        summary +=
+
+            `CUSTOMER DETAILS\n` +
+            `-------------------------\n` +
+            `Name: ${name}\n` +
+            `Phone: ${phone}\n` +
+            `Address: ${address}\n` +
+            `Service Date: ${date}\n` +
+            `Time Slot: ${timeSlot.value}\n\n`;
+
+
+        summary +=
+
+            `SELECTED SERVICES\n` +
+            `-------------------------\n`;
+
+
+        let total = 0;
+
+
+        selectedServices.forEach(
+            item => {
+
+                const subtotal =
+                    item.price *
+                    item.quantity;
+
+
+                total += subtotal;
+
+
+                summary +=
+
+                    `${item.name}\n` +
+
+                    `Quantity: ${item.quantity}\n` +
+
+                    `Price: ₹${item.price}\n` +
+
+                    `Subtotal: ₹${subtotal}\n\n`;
+
+            }
+        );
+
+
+        summary +=
+
+            `TOTAL ESTIMATED AMOUNT: ₹${total}\n\n`;
+
+
+        summary +=
+
+            `SPECIAL INSTRUCTIONS\n` +
+            `-------------------------\n` +
+            `${instructions || "None"}\n\n`;
+
+
+        summary +=
+
+            `Note: Final price and service availability ` +
+            `will be confirmed by the service provider.`;
+
+
+        /*
+            Put complete summary
+            into hidden Formspree field.
+        */
+
+        document
+            .getElementById(
+                "bookingSummary"
+            )
+            .value = summary;
+
+
+        /*
+            Disable button while submitting.
+        */
+
+        const button =
+            document.getElementById(
+                "submitButton"
+            );
+
+
+        button.disabled = true;
+
+        button.textContent =
+            "Submitting Booking...";
+
+
+        try {
+
+
+            const response =
+                await fetch(
+                    bookingForm.action,
+                    {
+
+                        method: "POST",
+
+                        body:
+                            new FormData(
+                                bookingForm
+                            ),
+
+                        headers: {
+
+                            "Accept":
+                                "application/json"
+
+                        }
+
+                    }
+                );
+
+
+            if (
+                response.ok
+            ) {
+
+
+                /*
+                    Clear local booking.
+                */
+
+                selectedServices = [];
+
+
+                localStorage.removeItem(
+                    "acSelectedServices"
+                );
+
+
+                updateBooking();
+
+
+                /*
+                    Hide form.
+                */
+
+                document
+                    .getElementById(
+                        "bookingContent"
+                    )
+                    .style.display =
+                    "none";
+
+
+                /*
+                    Show success.
+                */
+
+                document
+                    .getElementById(
+                        "successMessage"
+                    )
+                    .style.display =
+                    "block";
+
+
+                /*
+                    Reset form.
+                */
+
+                bookingForm.reset();
+
+
+            } else {
+
+                alert(
+                    "Unable to submit booking. Please try again."
+                );
+
+            }
+
+
+        } catch (error) {
+
+            alert(
+                "Network error. Please check your internet connection."
+            );
+
+        }
+
+
+        button.disabled = false;
+
+        button.textContent =
+            "📅 Confirm Service Booking";
+
+    }
+);
+
+
+/* =========================================================
+   INITIALIZE
+========================================================= */
+
+displayServices(
+    services
+);
+
+
+updateBooking();
+
+</script>
+
+</body>
+</html>
